@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "77b70ba0-5bd3-4910-9e6a-24ee1330ee68",
+		"name": "TP COMANDA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25754506"
+	},
+	"item": [
+		{
+			"name": "LISTAR USUARIOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR PEDIDOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR PRODUCTOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR MESAS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODkxMTAzNjQsImV4cCI6MTY4OTExMzk2NCwiYXVkIjoiYmYzYzBkNzU2ZTBhMmY3ZDU5MDRmOTE4ZmJkN2Q0YjI1MmZhOWY5NyIsImRhdGEiOnsicm9sIjoiTW96byIsIm1haWwiOiJqdWxpcml2ZXIxMjNAZ21haWwuY29tIn0sImFwcCI6IlBBUjIgMjAyMyJ9.Mi7otkuZ8J6XYvsxPd6ggA9fwdN6x15zBWQ4cSdpktE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/mesas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR USUARIO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "cocinero",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "cocinero@cocinero.com",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "cocinero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR PEDIDO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo_mesa",
+							"value": "BBBBB",
+							"type": "text"
+						},
+						{
+							"key": "mail_mozo",
+							"value": "juliriver123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mail_cliente",
+							"value": "cliente@cliente.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR MESA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo_mesa",
+							"value": "EEEEE",
+							"type": "text"
+						},
+						{
+							"key": "estado_mesa",
+							"value": "cerrada",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/mesas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"mesas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR PRODUCTO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sector",
+							"value": "cocinero",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "milanesa",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "222",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CARGAR PEDIDO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODkxMDQyNTgsImV4cCI6MTY4OTEwNzg1OCwiYXVkIjoiYmYzYzBkNzU2ZTBhMmY3ZDU5MDRmOTE4ZmJkN2Q0YjI1MmZhOWY5NyIsImRhdGEiOnsicm9sIjoiY29jaW5lcm8iLCJtYWlsIjoiY29jaW5lcm9AY29jaW5lcm8uY29tIn0sImFwcCI6IlBBUjIgMjAyMyJ9.frr9TQ0qfgdglHmXV_gLVulngUICYiGMUSvb5XHl3a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo_pedido",
+							"value": "BZAkn",
+							"type": "text"
+						},
+						{
+							"key": "nombre_producto",
+							"value": "milanesa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos/carga",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"carga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SACAR FOTO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/Lucas/Desktop/Progra3/parcial2/ParcialProgra3/arma.jpg"
+						},
+						{
+							"key": "codigo_pedido",
+							"value": "BZAkn",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos/cargaImagen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"cargaImagen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRAER PENDIENTES",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODkxMDk4NTYsImV4cCI6MTY4OTExMzQ1NiwiYXVkIjoiYmYzYzBkNzU2ZTBhMmY3ZDU5MDRmOTE4ZmJkN2Q0YjI1MmZhOWY5NyIsImRhdGEiOnsicm9sIjoiY29jaW5lcm8iLCJtYWlsIjoiY29jaW5lcm9AY29jaW5lcm8uY29tIn0sImFwcCI6IlBBUjIgMjAyMyJ9.s76Ap6mZQG-2Go1EGrZlvocsXnCuZ1eWPqyXKtJ3OaU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/pendientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"pendientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAMBIAR ESTADO PEDIDO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODkxMDU0MzIsImV4cCI6MTY4OTEwOTAzMiwiYXVkIjoiYmYzYzBkNzU2ZTBhMmY3ZDU5MDRmOTE4ZmJkN2Q0YjI1MmZhOWY5NyIsImRhdGEiOnsicm9sIjoiY29jaW5lcm8iLCJtYWlsIjoiY29jaW5lcm9AY29jaW5lcm8uY29tIn0sImFwcCI6IlBBUjIgMjAyMyJ9.meR0wwyTE1_DShFSCXSnvRcVTMZKBDYacjrjdd3i8Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_pedido\": \"BZAkn\",\r\n    \"nombre_producto\": \"carne\",\r\n    \"tiempo_estimado\": \"00:20:20\",\r\n    \"estado\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/pedidos/tomarPendiente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"tomarPendiente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mail",
+							"value": "juliriver123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1912",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estimados tiempo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2ODkxMDcwNzEsImV4cCI6MTY4OTExMDY3MSwiYXVkIjoiYmYzYzBkNzU2ZTBhMmY3ZDU5MDRmOTE4ZmJkN2Q0YjI1MmZhOWY5NyIsImRhdGEiOnsicm9sIjoiY29jaW5lcm8iLCJtYWlsIjoiY29jaW5lcm9AY29jaW5lcm8uY29tIn0sImFwcCI6IlBBUjIgMjAyMyJ9.FMmK9Mr2PISoMIdGCHWb5_2Bo1_fSFoyIT1xWkzl8IQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/estimado?codigo_pedido=BZAkn&codigo_mesa=BBBBB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"estimado"
+					],
+					"query": [
+						{
+							"key": "codigo_pedido",
+							"value": "BZAkn"
+						},
+						{
+							"key": "codigo_mesa",
+							"value": "BBBBB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VER PEDIDOS DUEÑO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/pedidos/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"pedidos",
+						"listado"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
